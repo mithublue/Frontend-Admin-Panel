@@ -100,15 +100,6 @@ class UAD_Shortcode {
             true
         );
 
-        // Enqueue hotel booking module JavaScript
-        wp_enqueue_script(
-            'uad-hotel-booking-module',
-            UAD_PLUGIN_URL . 'modules/hotel-room-booker/hotel-booking.js',
-            array( 'jquery', $this->plugin_name . '-dashboard' ),
-            time(),
-            true
-        );
-
 
         // Localize script with AJAX URL and nonce
         wp_localize_script(

@@ -24,18 +24,6 @@ class UAD_Module_Hotel_Room_Booker extends UAD_Module {
     public function init() {
         // Register AJAX handlers
         add_action( 'wp_ajax_uad_generate_hotel_pdf', array( $this, 'generate_pdf' ) );
-        
-        // Print script in footer
-        add_action( 'wp_footer', array( $this, 'print_footer_scripts' ) );
-    }
-
-    /**
-     * Print module JavaScript in footer.
-     */
-    public function print_footer_scripts() {
-        ?>
-        <script src="<?php echo UAD_PLUGIN_URL . 'modules/hotel-room-booker/hotel-booking.js?v=' . time(); ?>"></script>
-        <?php
     }
 
 
