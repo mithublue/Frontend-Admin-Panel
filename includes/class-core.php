@@ -95,6 +95,15 @@ class UAD_Core {
     }
 
     /**
+     * Get the module loader instance.
+     *
+     * @return UAD_Module_Loader
+     */
+    public function get_module_loader() {
+        return $this->module_loader;
+    }
+
+    /**
      * The name of the plugin.
      *
      * @return string

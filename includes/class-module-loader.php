@@ -51,10 +51,66 @@ class UAD_Module_Loader {
             $this->load_module( $module_folder );
         }
 
+        // Allow external plugins to register modules
+        $this->load_external_modules();
+
         // Sort modules by priority
         uasort( $this->modules, function( $a, $b ) {
             return $a->get_priority() - $b->get_priority();
         });
+    }
+
+    /**
+     * Load modules registered by external plugins.
+     */
+    private function load_external_modules() {
+        /**
+         * Filter to allow external plugins to register custom modules.
+         *
+         * @param array $modules Array of module instances to register.
+         */
+        $external_modules = apply_filters( 'uad_register_modules', array() );
+
+        if ( ! is_array( $external_modules ) ) {
+            return;
+        }
+
+        foreach ( $external_modules as $module ) {
+            if ( $module instanceof UAD_Module ) {
+                // Initialize the module
+                $module->init();
+
+                // Register the module
+                $this->modules[ $module->get_id() ] = $module;
+            }
+        }
+    }
+
+    /**
+     * Register a module programmatically.
+     *
+     * This method allows external plugins to register modules at any time.
+     *
+     * @param UAD_Module $module The module instance to register.
+     * @return bool True if registered successfully, false otherwise.
+     */
+    public function register_module( UAD_Module $module ) {
+        if ( ! $module instanceof UAD_Module ) {
+            return false;
+        }
+
+        // Initialize the module
+        $module->init();
+
+        // Register the module
+        $this->modules[ $module->get_id() ] = $module;
+
+        // Re-sort modules by priority
+        uasort( $this->modules, function( $a, $b ) {
+            return $a->get_priority() - $b->get_priority();
+        });
+
+        return true;
     }
 
     /**
