@@ -213,7 +213,7 @@
         // Also attach directly to button as fallback
         $('#uad-hotel-booking-form-submit').on('click', function (e) {
             console.log('Button click event fired');
-            e.preventDefault(); // Prevent default form submission
+            e.preventDefault(); // Prevent default form submission 
             handlePDFGeneration(e);
         });
 
