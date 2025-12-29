@@ -1,0 +1,25 @@
+{
+  "name": "user-admin-dashboard",
+  "version": "1.0.0",
+  "description": "WordPress plugin with TailwindCSS for admin dashboard",
+  "scripts": {
+    "build": "npx tailwindcss -i ./assets/src/styles.css -o ./assets/dist/styles.css --minify",
+    "dev": "npx tailwindcss -i ./assets/src/styles.css -o ./assets/dist/styles.css --watch",
+    "build:dev": "npx tailwindcss -i ./assets/src/styles.css -o ./assets/dist/styles.css"
+  },
+  "keywords": [
+    "wordpress",
+    "dashboard",
+    "tailwindcss"
+  ],
+  "author": "Your Name",
+  "license": "GPL-2.0+",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  },
+  "require": {
+    "tecnickcom/tcpdf": "^6.7"
+  }
+}
