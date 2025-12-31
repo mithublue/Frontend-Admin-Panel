@@ -1,0 +1,130 @@
+/**
+ * UAD Settings Page Styles
+ */
+
+.uad-settings-wrap {
+    max-width: 900px;
+}
+
+.uad-settings-wrap h1 {
+    margin-bottom: 20px;
+}
+
+.uad-nav-tabs {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.uad-nav-tabs .nav-tab {
+    background: #f6f7f7;
+    border-color: #c3c4c7;
+    margin-left: 0;
+    margin-right: 4px;
+}
+
+.uad-nav-tabs .nav-tab:hover {
+    background: #fff;
+}
+
+.uad-nav-tabs .nav-tab-active {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.uad-settings-content {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-top: none;
+    padding: 20px;
+}
+
+.uad-settings-content h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.uad-settings-content .form-table {
+    margin-top: 10px;
+}
+
+.uad-settings-content .form-table th {
+    padding-left: 0;
+    width: 200px;
+}
+
+.uad-settings-content .description {
+    color: #666;
+    font-style: italic;
+}
+
+/* Module Settings Styling */
+.uad-module-settings {
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.uad-module-settings h3 {
+    margin-top: 0;
+    color: #1e293b;
+}
+
+.uad-module-settings .form-table {
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.uad-input-url {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.uad-input-url:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+.uad-test-btn {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background: #f1f5f9;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.uad-test-btn:hover {
+    background: #e2e8f0;
+}
+
+.uad-notice {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.uad-notice.success {
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+}
+
+.uad-notice.warning {
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+    color: #92400e;
+}
+
+.uad-notice.error {
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}

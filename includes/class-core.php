@@ -50,6 +50,9 @@ class UAD_Core {
         // Load module system
         require_once UAD_PLUGIN_DIR . 'includes/class-module-loader.php';
 
+        // Load settings
+        require_once UAD_PLUGIN_DIR . 'includes/class-settings.php';
+
         // Load admin classes
         require_once UAD_PLUGIN_DIR . 'admin/class-admin.php';
         require_once UAD_PLUGIN_DIR . 'admin/class-shortcode.php';
@@ -59,6 +62,9 @@ class UAD_Core {
         require_once UAD_PLUGIN_DIR . 'public/class-auth.php';
 
         $this->loader = new UAD_Loader();
+
+        // Initialize settings
+        new UAD_Settings();
     }
 
     /**
